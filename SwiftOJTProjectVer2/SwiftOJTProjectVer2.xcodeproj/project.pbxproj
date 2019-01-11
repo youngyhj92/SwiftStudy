@@ -15,6 +15,8 @@
 		E4F106BA21E462510023716E /* SwiftOJTProjectVer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F106B921E462510023716E /* SwiftOJTProjectVer2Tests.swift */; };
 		E4F106C521E462510023716E /* SwiftOJTProjectVer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F106C421E462510023716E /* SwiftOJTProjectVer2UITests.swift */; };
 		E4F106D521E479990023716E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F106D421E479990023716E /* MainViewController.swift */; };
+		E4F106DD21E6D6810023716E /* MovieVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F106DC21E6D6810023716E /* MovieVO.swift */; };
+		E4F55CB721E82BCF008487E9 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F55CB621E82BCF008487E9 /* Details.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		E4F106C421E462510023716E /* SwiftOJTProjectVer2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOJTProjectVer2UITests.swift; sourceTree = "<group>"; };
 		E4F106C621E462510023716E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4F106D421E479990023716E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E4F106DC21E6D6810023716E /* MovieVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieVO.swift; sourceTree = "<group>"; };
+		E4F55CB621E82BCF008487E9 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				E4F106AD21E462510023716E /* LaunchScreen.storyboard */,
 				E4F106B021E462510023716E /* Info.plist */,
 				E4F106D421E479990023716E /* MainViewController.swift */,
+				E4F106DC21E6D6810023716E /* MovieVO.swift */,
+				E4F55CB621E82BCF008487E9 /* Details.swift */,
 			);
 			path = SwiftOJTProjectVer2;
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F106D521E479990023716E /* MainViewController.swift in Sources */,
+				E4F55CB721E82BCF008487E9 /* Details.swift in Sources */,
 				E4F106A721E462510023716E /* ViewController.swift in Sources */,
 				E4F106A521E462510023716E /* AppDelegate.swift in Sources */,
+				E4F106DD21E6D6810023716E /* MovieVO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
