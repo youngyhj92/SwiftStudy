@@ -22,7 +22,7 @@ class Details : UIViewController {
         self.titleLabel.text = movieInfo.title
         self.descriptionContents.text = movieInfo.description
         self.openDateContents.text = movieInfo.openDate
-        self.ratingConents.text = String(stringInterpolationSegment: movieInfo.rating)
+        self.ratingConents.text = String(stringInterpolationSegment: movieInfo.rating!)
         self.detailContents.text = movieInfo.detail
     }
 }

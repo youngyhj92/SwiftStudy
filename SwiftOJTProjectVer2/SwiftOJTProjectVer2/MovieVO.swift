@@ -6,8 +6,6 @@
 //  Copyright © 2019 hj.yang. All rights reserved.
 //
 
-import Foundation
-
 class MovieVO {
     var thumbNail : String? //thumbnail Image address
     var title : String? // Movie name

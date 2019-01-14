@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var userId: UITextField!
     @IBOutlet var userPassword: UITextField!
@@ -30,7 +30,7 @@ class ViewController: UIViewController {
             if(userId.text == "wrapsody" && userPassword.text == "1111")  {
                 let mainView = self.storyboard!.instantiateViewController(withIdentifier: "MainView")
                 mainView.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-                self.present(mainView, animated: false)
+                self.navigationController?.pushViewController(mainView, animated: true)
                 
             } else {
                 let checkAlertDialog = AlertDialog(alertMessage: "Please, Check ID and Password")
@@ -39,7 +39,12 @@ class ViewController: UIViewController {
         }
     }
     
+    //스크린을 터치할 때 키보드가 사라지게 함.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     
+    //AlertDialog 실행
     func AlertDialog (alertMessage : String) -> UIAlertController  {
         let alertDialog = UIAlertController(title: "Login Failed", message: alertMessage , preferredStyle: UIAlertController.Style.alert)
         let checkedButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel)
