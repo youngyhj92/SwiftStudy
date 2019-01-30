@@ -23,7 +23,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="gz4-St-NCJ" kind="presentation" id="ylD-Pc-ud5"/>
+                                    <action selector="onClickstartingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c1r-sp-pDD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -53,6 +53,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kEq-E7-0dg">
+                                <rect key="frame" x="164" y="406" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onClickBack:" destination="eMQ-xZ-JZe" eventType="touchUpInside" id="180-T3-G8p"/>
+                                    <action selector="test:" destination="gz4-St-NCJ" eventType="touchUpInside" id="WhP-r2-Ie3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -61,8 +70,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="77v-eu-7vh"/>
                     </view>
+                    <connections>
+                        <outlet property="helloWorldText" destination="db6-u4-sb7" id="g47-9k-0LD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9f-Fr-2zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eMQ-xZ-JZe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="945" y="27"/>
         </scene>

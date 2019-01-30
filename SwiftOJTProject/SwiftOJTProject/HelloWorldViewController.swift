@@ -11,8 +11,11 @@ import UIKit
 
 class HelloWorldViewController : UIViewController  {
     
+    @IBOutlet var helloWorldLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+   
 }
