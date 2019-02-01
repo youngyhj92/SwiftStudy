@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="OJTProjectVer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="computer" translatesAutoresizingMaskIntoConstraints="NO" id="H3E-Xq-FgQ">
+                                <rect key="frame" x="112" y="120" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H3E-Xq-FgQ" secondAttribute="height" multiplier="1:1" id="Zlk-7w-qVI"/>
+                                    <constraint firstAttribute="width" constant="150" id="eKs-RM-ob9"/>
+                                    <constraint firstAttribute="height" constant="150" id="vEK-zc-Q8V"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ID" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SSA-Uf-78T">
+                                <rect key="frame" x="63" y="320" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bo5-ny-GI5">
+                                <rect key="frame" x="63" y="375" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="join" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6g-RT-Saw">
+                                <rect key="frame" x="165" y="445" width="46" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Join"/>
+                                <connections>
+                                    <action selector="joinButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xuF-QJ-5nd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SSA-Uf-78T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="93I-EZ-gSD"/>
+                            <constraint firstItem="s6g-RT-Saw" firstAttribute="top" secondItem="Bo5-ny-GI5" secondAttribute="bottom" constant="40" id="Czr-pR-Kev"/>
+                            <constraint firstItem="s6g-RT-Saw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUp-mv-isa"/>
+                            <constraint firstItem="Bo5-ny-GI5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JJ8-oD-Mg7"/>
+                            <constraint firstItem="Bo5-ny-GI5" firstAttribute="top" secondItem="SSA-Uf-78T" secondAttribute="bottom" constant="25" id="OC3-8R-Zbw"/>
+                            <constraint firstItem="Bo5-ny-GI5" firstAttribute="leading" secondItem="SSA-Uf-78T" secondAttribute="leading" id="Rbb-4P-hLv"/>
+                            <constraint firstItem="s6g-RT-Saw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="UVX-3F-adP"/>
+                            <constraint firstItem="SSA-Uf-78T" firstAttribute="top" secondItem="H3E-Xq-FgQ" secondAttribute="bottom" constant="50" id="XyM-MP-6Bv"/>
+                            <constraint firstItem="SSA-Uf-78T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="63" id="c95-9o-tHx"/>
+                            <constraint firstItem="H3E-Xq-FgQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="hzY-9L-rV5"/>
+                            <constraint firstItem="H3E-Xq-FgQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="112" id="mED-Iy-sdk"/>
+                            <constraint firstItem="H3E-Xq-FgQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v2n-AK-7RC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="idField" destination="SSA-Uf-78T" id="008-ob-Zxl"/>
+                        <outlet property="passwordField" destination="Bo5-ny-GI5" id="qxs-a6-wf6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="27.436281859070466"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="computer" width="409.60000610351562" height="409.60000610351562"/>
+    </resources>
+</document>
