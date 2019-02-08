@@ -50,9 +50,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             //Scenario 2. Storyboard에서 연결하지 않고 delegate.window.rootViewController를 변경.
             //NavigationViewController RootViewController 설정 -> 이동됨.
-            let navigationController = UINavigationController(rootViewController: mainViewController)
-            let appDelegate:UIApplicationDelegate = UIApplication.shared.delegate!
-            appDelegate.window??.rootViewController = navigationController
+//            let navigationController = UINavigationController(rootViewController: mainViewController)
+//            let appDelegate:UIApplicationDelegate = UIApplication.shared.delegate!
+//            appDelegate.window??.rootViewController = navigationController
+            
+            mainViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
+            self.present(mainViewController,animated: true)
         }
     }
     
@@ -61,6 +64,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             showAlertDialog(message: "ID 혹은 Password를 입력하세요")
             return false
         } else if (id == "Wrapsody" && password == "1111")  {
+            UserDefaults.standard.set(id, forKey: "userId")
+            UserDefaults.standard.set(password, forKey: "userPassword")
+            UserDefaults.standard.set(true, forKey: "isLogin")
             return true
         } else {
             showAlertDialog(message: "ID 혹은 Password가 올바르지 않습니다.")
