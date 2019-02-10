@@ -8,6 +8,13 @@
 
 import UIKit
 
-class DetailViewController : UIViewController  {
+class InfoViewController : UIViewController  {
+    
+    @IBOutlet var contentsTitle: UILabel!
+    @IBOutlet var contentsMaker: UILabel!
+    @IBOutlet var contentsRating: UILabel!
+    
+    let movieInfo = Movie()
+    
     
 }

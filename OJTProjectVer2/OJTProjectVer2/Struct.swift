@@ -8,4 +8,9 @@
 
 import UIKit
 
+struct Movie {
+    var name : String?
+    var maker : String?
+    var rating : Double?
+}
 

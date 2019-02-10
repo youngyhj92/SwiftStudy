@@ -40,19 +40,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
        let checkIdentification = idVerification(id: idField.text!, password: passwordField.text!)
         if(checkIdentification)  {
         // Storyboard에서 mainView를 ID로 가진 VIewController를 객체화함.
+            idField.text = nil
+            passwordField.text = nil
+            
             guard let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainView") else {
                 print("Not access Main Page")
                 return
             }
-            //Scenario 1. Storyboard에서 Button과 NavigationController를 연결한 후 다음 소스 진행.
-//            mainViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-//            self.navigationController?.pushViewController(mainViewController, animated: true)
-            
-            //Scenario 2. Storyboard에서 연결하지 않고 delegate.window.rootViewController를 변경.
-            //NavigationViewController RootViewController 설정 -> 이동됨.
-//            let navigationController = UINavigationController(rootViewController: mainViewController)
-//            let appDelegate:UIApplicationDelegate = UIApplication.shared.delegate!
-//            appDelegate.window??.rootViewController = navigationController
             
             mainViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
             self.present(mainViewController,animated: true)
