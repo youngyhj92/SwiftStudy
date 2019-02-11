@@ -12,9 +12,9 @@ import UIKit
 class MainViewController : UITableViewController  {
     
     let movieData = [
-        Movie(name:"Harry Potter",maker:"J.K Rowling",rating:5.0)
-        ,Movie(name:"The Load Of Ring", maker: "W.A.I",rating: 4.5)
-        ,Movie(name:"the Avengers", maker : "mavel", rating: 4.0)
+        Movie(image:UIImage(named: "AppIcon.png")!, name:"Harry Potter",maker:"J.K Rowling",rating:5.0)
+        ,Movie(image:UIImage(named: "thelordofthering.jpg")!, name:"The Lord Of the Ring", maker: "J.R.R.Tolkin",rating: 4.5)
+        ,Movie(image:UIImage(named: "avengers.png")!, name:"the Avengers", maker : "marvel studio", rating: 4.0)
     ]
     
     //tableView 전체 행의 개수
@@ -25,7 +25,7 @@ class MainViewController : UITableViewController  {
     // tableView Cell 하나에 들어가는 정보
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellItem = tableView.dequeueReusableCell(withIdentifier: "movieListItem",for:indexPath) as! MainTableVIewCell
-//        cellItem.cellImage.image =
+        cellItem.cellImage.image = movieData[indexPath.row].image
         cellItem.cellTitle.text = movieData[indexPath.row].name
         cellItem.cellMaker.text = "Maker : " + movieData[indexPath.row].maker
         cellItem.cellRating.text = "Rating : " + String(movieData[indexPath.row].rating)
@@ -37,11 +37,11 @@ class MainViewController : UITableViewController  {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //insert Detail view
         guard let detailView = self.storyboard!.instantiateViewController(withIdentifier:
-            "DetailView")as? InfoViewController else {
+            "detailInfo")as? InfoViewController else {
                 return
         }
-        
-        detailView.movieInfo = movieData[indexPath.row]
+        detailView.movieDetailInfo = movieData[indexPath.row]
+        self.navigationController?.pushViewController(detailView, animated: true)
     }
     
     

@@ -9,8 +9,9 @@
 import UIKit
 
 struct Movie {
-    var name : String?
-    var maker : String?
-    var rating : Double?
+    let image : UIImage
+    let name : String
+    let maker : String
+    let rating : Double
 }
 

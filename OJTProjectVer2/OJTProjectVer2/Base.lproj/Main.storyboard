@@ -106,7 +106,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="65.666666666666671"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="computer" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-hI-rYx">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default.png" translatesAutoresizingMaskIntoConstraints="NO" id="gyT-hI-rYx">
                                             <rect key="frame" x="16" y="8" width="50" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="RQw-Sp-cij"/>
@@ -261,9 +261,10 @@
                         <viewLayoutGuide key="safeArea" id="hFx-8x-Bsl"/>
                     </view>
                     <connections>
-                        <outlet property="contentsMaker" destination="vZL-Th-7Q1" id="kKK-e2-qW2"/>
-                        <outlet property="contentsRating" destination="zTv-sV-Nyv" id="ATV-iK-RXp"/>
-                        <outlet property="contentsTitle" destination="xQu-fd-vfY" id="lTy-BU-4AA"/>
+                        <outlet property="infoImageView" destination="rN1-PJ-XT0" id="qg9-f3-8ED"/>
+                        <outlet property="infoMakerLabel" destination="vZL-Th-7Q1" id="mlF-nf-zBe"/>
+                        <outlet property="infoRatingLabel" destination="zTv-sV-Nyv" id="PO0-eu-WuU"/>
+                        <outlet property="infoTitleLabel" destination="xQu-fd-vfY" id="h1H-sg-hOv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zh5-f1-LJz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,6 +321,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Default.png" width="320" height="568"/>
         <image name="computer" width="409.60000610351562" height="409.60000610351562"/>
     </resources>
 </document>

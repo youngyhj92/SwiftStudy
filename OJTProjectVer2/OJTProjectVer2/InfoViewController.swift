@@ -9,12 +9,22 @@
 import UIKit
 
 class InfoViewController : UIViewController  {
+   
+    @IBOutlet var infoImageView: UIImageView!
+    @IBOutlet var infoTitleLabel: UILabel!
+    @IBOutlet var infoMakerLabel: UILabel!
+    @IBOutlet var infoRatingLabel: UILabel!
     
-    @IBOutlet var contentsTitle: UILabel!
-    @IBOutlet var contentsMaker: UILabel!
-    @IBOutlet var contentsRating: UILabel!
+    var movieDetailInfo : Movie?
     
-    let movieInfo = Movie()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        infoImageView.image = movieDetailInfo!.image
+        infoTitleLabel.text = movieDetailInfo!.name
+        infoMakerLabel.text = movieDetailInfo!.maker
+        infoRatingLabel.text = String(movieDetailInfo!.rating)
+    }
     
     
 }
+
