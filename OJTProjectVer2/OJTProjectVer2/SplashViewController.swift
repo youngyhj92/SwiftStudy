@@ -11,7 +11,7 @@ import UIKit
 class SplashViewController : UIViewController  {
      
     override func viewDidAppear(_ animated: Bool) {
-        sleep(2)
+        sleep(1)
         if(checkLogin())  {
             //Main Page Load
             guard let mainView = self.storyboard?.instantiateViewController(withIdentifier: "mainView") else {

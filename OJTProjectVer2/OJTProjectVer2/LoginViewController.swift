@@ -35,36 +35,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
 
-    
     @IBAction func joinButtonClicked(_ sender: UIButton) {
-       let checkIdentification = idVerification(id: idField.text!, password: passwordField.text!)
-        if(checkIdentification)  {
-        // Storyboard에서 mainView를 ID로 가진 VIewController를 객체화함.
-            idField.text = nil
-            passwordField.text = nil
-            
-            guard let mainViewController = self.storyboard?.instantiateViewController(withIdentifier: "mainView") else {
-                print("Not access Main Page")
-                return
-            }
-            
-            mainViewController.modalTransitionStyle = UIModalTransitionStyle.coverVertical
-            self.present(mainViewController,animated: true)
-        }
-    }
-    
-    func idVerification(id:String, password:String) -> Bool  {
-        if(id.isEmpty || password.isEmpty)  {
+        let id = idField.text
+        let password = passwordField.text
+        if(id!.isEmpty || password!.isEmpty)  {
             showAlertDialog(message: "ID 혹은 Password를 입력하세요")
-            return false
         } else if (id == "Wrapsody" && password == "1111")  {
             UserDefaults.standard.set(id, forKey: "userId")
             UserDefaults.standard.set(password, forKey: "userPassword")
             UserDefaults.standard.set(true, forKey: "isLogin")
-            return true
+            self.dismiss(animated: true, completion: nil)
         } else {
             showAlertDialog(message: "ID 혹은 Password가 올바르지 않습니다.")
-            return false
         }
     }
     
