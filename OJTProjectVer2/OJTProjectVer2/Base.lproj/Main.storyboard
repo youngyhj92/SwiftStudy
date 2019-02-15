@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wpm-Iu-M5x">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="H2j-gh-Oww">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -163,6 +163,35 @@
             </objects>
             <point key="canvasLocation" x="2130.434782608696" y="212.27678571428569"/>
         </scene>
+        <!--Custom Table View Controller-->
+        <scene sceneID="5CE-r1-iOg">
+            <objects>
+                <viewController id="kaO-ha-sbV" customClass="CustomTableViewController" customModule="OJTProjectVer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vHY-MX-yDb"/>
+                        <viewControllerLayoutGuide type="bottom" id="rLG-p7-MTY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Hwa-tf-eYX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sEw-hK-83N">
+                                <rect key="frame" x="20" y="96" width="374" height="173"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Cn8-uW-cjo"/>
+                    <connections>
+                        <outlet property="tableView" destination="sEw-hK-83N" id="GdV-IV-GbR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbC-HL-k4n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2128.985507246377" y="955.58035714285711"/>
+        </scene>
         <!--Detail-->
         <scene sceneID="IYv-N9-c26">
             <objects>
@@ -305,6 +334,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yhd-aa-o2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1029.0000000000002" y="213"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x5o-me-ATe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H2j-gh-Oww" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0F8-OJ-IQb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kaO-ha-sbV" kind="relationship" relationship="rootViewController" id="jt0-fv-bL1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pa6-Ji-uRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="956"/>
         </scene>
     </scenes>
     <resources>

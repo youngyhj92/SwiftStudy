@@ -11,6 +11,9 @@
 		E462C7F9220C23220092415E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E462C7F8220C23220092415E /* MainViewController.swift */; };
 		E48FD7C3220D38C20016BCDC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48FD7C2220D38C20016BCDC /* SplashViewController.swift */; };
 		E48FD7E7220D7AFD0016BCDC /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48FD7E6220D7AFD0016BCDC /* Movie.swift */; };
+		E4C6DDA5221504B600803EA3 /* CustomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6DDA4221504B600803EA3 /* CustomTableViewController.swift */; };
+		E4C6DDAA2215053100803EA3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C6DDA82215053100803EA3 /* CustomTableViewCell.swift */; };
+		E4C6DDAB2215053100803EA3 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4C6DDA92215053100803EA3 /* CustomTableViewCell.xib */; };
 		E4D494D62203C5ED00E82579 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D494D52203C5ED00E82579 /* AppDelegate.swift */; };
 		E4D494D82203C5ED00E82579 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D494D72203C5ED00E82579 /* LoginViewController.swift */; };
 		E4D494DB2203C5ED00E82579 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4D494D92203C5ED00E82579 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 		E462C7F8220C23220092415E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E48FD7C2220D38C20016BCDC /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E48FD7E6220D7AFD0016BCDC /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		E4C6DDA4221504B600803EA3 /* CustomTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewController.swift; sourceTree = "<group>"; };
+		E4C6DDA82215053100803EA3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		E4C6DDA92215053100803EA3 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
 		E4D494D22203C5ED00E82579 /* OJTProjectVer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OJTProjectVer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4D494D52203C5ED00E82579 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; usesTabs = 0; };
 		E4D494D72203C5ED00E82579 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,9 @@
 				E48FD7C2220D38C20016BCDC /* SplashViewController.swift */,
 				E48FD7E6220D7AFD0016BCDC /* Movie.swift */,
 				CD65C8D122106BD4009E3E85 /* InfoViewController.swift */,
+				E4C6DDA4221504B600803EA3 /* CustomTableViewController.swift */,
+				E4C6DDA82215053100803EA3 /* CustomTableViewCell.swift */,
+				E4C6DDA92215053100803EA3 /* CustomTableViewCell.xib */,
 			);
 			path = OJTProjectVer2;
 			sourceTree = "<group>";
@@ -133,6 +142,7 @@
 			files = (
 				E4D494DD2203C5EE00E82579 /* Assets.xcassets in Resources */,
 				E4D494DB2203C5ED00E82579 /* Main.storyboard in Resources */,
+				E4C6DDAB2215053100803EA3 /* CustomTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,9 +155,11 @@
 			files = (
 				E462C7F9220C23220092415E /* MainViewController.swift in Sources */,
 				E4D494D82203C5ED00E82579 /* LoginViewController.swift in Sources */,
+				E4C6DDAA2215053100803EA3 /* CustomTableViewCell.swift in Sources */,
 				E4D494D62203C5ED00E82579 /* AppDelegate.swift in Sources */,
 				E48FD7E7220D7AFD0016BCDC /* Movie.swift in Sources */,
 				E48FD7C3220D38C20016BCDC /* SplashViewController.swift in Sources */,
+				E4C6DDA5221504B600803EA3 /* CustomTableViewController.swift in Sources */,
 				CD65C8D222106BD4009E3E85 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
