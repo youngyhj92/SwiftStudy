@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  OJTProjectVer2
+
+  Created by 양현준 on 20/02/2019.
+  Copyright © 2019 hj.yang. All rights reserved.
+*/
+
+"Harry Potter" = "해리포터";
+"The Lord Of the Ring" = "반지의 제왕";
+"the Avengers" = "어벤저스";
+"Maker" = "지은이";
+"Rating" = "평점";
+"Logout_title" = "로그아웃";
+"Logout_message" = "로그아웃 하시겠습니까?";

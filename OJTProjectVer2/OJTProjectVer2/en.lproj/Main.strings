@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "0e5-w5-dwp"; */
+"0e5-w5-dwp.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "새로운 네비게이터"; ObjectID = "9j8-Gm-lfZ"; */
+"9j8-Gm-lfZ.normalTitle" = "New Navigator";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Bo5-ny-GI5"; */
+"Bo5-ny-GI5.placeholder" = "Password";
+
+/* Class = "UILabel"; text = "Maker"; ObjectID = "CY6-RU-PS7"; */
+"CY6-RU-PS7.text" = "Maker";
+
+/* Class = "UINavigationItem"; title = "ListCustom"; ObjectID = "Cn8-uW-cjo"; */
+"Cn8-uW-cjo.title" = "ListCustom";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "FpP-mh-7J7"; */
+"FpP-mh-7J7.title" = "Detail";
+
+/* Class = "UITextField"; placeholder = "ID"; ObjectID = "SSA-Uf-78T"; */
+"SSA-Uf-78T.placeholder" = "ID";
+
+/* Class = "UILabel"; text = "Maker"; ObjectID = "hgr-ko-61f"; */
+"hgr-ko-61f.text" = "Maker";
+
+/* Class = "UINavigationItem"; title = "List"; ObjectID = "onq-0W-ZNu"; */
+"onq-0W-ZNu.title" = "List";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "r0k-6S-Pt4"; */
+"r0k-6S-Pt4.text" = "Rating";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "rb6-45-Eaa"; */
+"rb6-45-Eaa.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Join"; ObjectID = "s6g-RT-Saw"; */
+"s6g-RT-Saw.normalTitle" = "Join";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "uf3-gq-VzG"; */
+"uf3-gq-VzG.text" = "Rating";
+
+/* Class = "UILabel"; text = "ContentsMaker"; ObjectID = "vZL-Th-7Q1"; */
+"vZL-Th-7Q1.text" = "ContentsMaker";
+
+/* Class = "UILabel"; text = "ContentsTitle"; ObjectID = "xQu-fd-vfY"; */
+"xQu-fd-vfY.text" = "ContentsTitle";
+
+/* Class = "UILabel"; text = "ContentsRating"; ObjectID = "zTv-sV-Nyv"; */
+"zTv-sV-Nyv.text" = "ContentsRating";

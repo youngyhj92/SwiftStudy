@@ -14,7 +14,7 @@ class SplashViewController : UIViewController  {
         sleep(1)
         if(checkLogin())  {
             //Main Page Load
-            guard let mainView = self.storyboard?.instantiateViewController(withIdentifier: "mainView") else {
+            guard let mainView = self.storyboard?.instantiateViewController(withIdentifier: "viewMain") else {
                 print("main Page load fail")
                 return
             }
@@ -42,4 +42,10 @@ class SplashViewController : UIViewController  {
         }
     }
     
+}
+
+extension String {
+    var localized : String {
+        return NSLocalizedString(self, tableName: "Localizable", bundle: .main, value: "\(self)", comment: "")
+    }
 }

@@ -12,13 +12,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var idField: UITextField!
     @IBOutlet var passwordField: UITextField!
-    @IBOutlet var joinButton: UIButton!
+    @IBOutlet var loginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // delegate 사용자 지정 - 현재 클래스에서 위임자로 진행하겠다고 지정함. ("Event가 발생하면 protocol에 따라 응답을 보내줄꼐")
         self.idField.delegate = self
         self.passwordField.delegate = self
+        
+        idField.placeholder = idField.placeholder?.localized
+        passwordField.placeholder = passwordField.placeholder?.localized
+        loginButton.titleLabel?.text = loginButton.titleLabel?.text?.localized
     }
     
     //UITextField Delegate에 지정되어있는 function
@@ -28,7 +32,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.passwordField.becomeFirstResponder()
         } else if(textField.isEqual(self.passwordField))  {
             //Password Field return 버튼 클릭시 Join Button 클릭 동작
-            joinButton.sendActions(for: .touchUpInside)
+            loginButton.sendActions(for: .touchUpInside)
         } else {
             textField.resignFirstResponder()
         }
@@ -39,14 +43,14 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         let id = idField.text
         let password = passwordField.text
         if(id!.isEmpty || password!.isEmpty)  {
-            showAlertDialog(message: "ID 혹은 Password를 입력하세요")
+            showAlertDialog(message: "ID 혹은 Password를 입력하세요".localized)
         } else if (id == "Wrapsody" && password == "1111")  {
             UserDefaults.standard.set(id, forKey: "userId")
             UserDefaults.standard.set(password, forKey: "userPassword")
             UserDefaults.standard.set(true, forKey: "isLogin")
             self.dismiss(animated: true, completion: nil)
         } else {
-            showAlertDialog(message: "ID 혹은 Password가 올바르지 않습니다.")
+            showAlertDialog(message: "ID 혹은 Password가 올바르지 않습니다.".localized)
         }
     }
     

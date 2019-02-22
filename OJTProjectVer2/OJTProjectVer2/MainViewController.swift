@@ -27,31 +27,41 @@ class MainViewController : UITableViewController  {
         let cellItem = tableView.dequeueReusableCell(withIdentifier: "movieListItem",for:indexPath) as! MainTableVIewCell
         cellItem.cellImage.image = movieData[indexPath.row].image
         cellItem.cellTitle.text = movieData[indexPath.row].name
-        cellItem.cellMaker.text = "Maker : " + movieData[indexPath.row].maker
-        cellItem.cellRating.text = "Rating : " + String(movieData[indexPath.row].rating)
+        cellItem.cellMaker.text = "Maker".localized + " : " + movieData[indexPath.row].maker
+        cellItem.cellRating.text = "Rating".localized + " : " + String(movieData[indexPath.row].rating)
         
         return cellItem
     }
     
-    //tableView 한개 행을 클릭했을 때 동작
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //insert Detail view
-        guard let detailView = self.storyboard!.instantiateViewController(withIdentifier:
-            "detailInfo")as? InfoViewController else {
-                return
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "mainTableCellSegue" {
+            let destination = segue.destination as? InfoViewController
+            let clickedItemRow = self.tableView.indexPathForSelectedRow?.row
+        
+            if clickedItemRow != nil  {
+                destination?.movieDetailInfo = movieData[clickedItemRow!]
+            }
         }
-        detailView.movieDetailInfo = movieData[indexPath.row]
-        self.navigationController?.pushViewController(detailView, animated: true)
     }
     
     
-    
-    
+//    //tableView 한개 행을 클릭했을 때 동작
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        //insert Detail view
+////        guard let detailView = self.storyboard!.instantiateViewController(withIdentifier:
+////            "detailInfo")as? InfoViewController else {
+////                return
+////        }
+////        detailView.movieDetailInfo = movieData[indexPath.row]
+////        self.navigationController?.pushViewController(detailView, animated: true)
+//
+//
+//    }
     
     
     //Logout CLick
     @IBAction func logoutClicked(_ sender: Any) {
-        let logoutCheckDialog = UIAlertController(title: "Logout", message: "Logout 하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
+        let logoutCheckDialog = UIAlertController(title: "Logout_title".localized, message: "Logout_message".localized, preferredStyle: UIAlertController.Style.alert)
         let logoutAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {
             (logoutAction) in self.logout()
         })
@@ -65,10 +75,10 @@ class MainViewController : UITableViewController  {
         UserDefaults.standard.removeObject(forKey: "userId")
         UserDefaults.standard.removeObject(forKey: "userPassword")
         UserDefaults.standard.removeObject(forKey: "isLogin")
-        
-        self.dismiss(animated: false)
+       
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        self.dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
-    
 }
 
 class MainTableVIewCell: UITableViewCell {
