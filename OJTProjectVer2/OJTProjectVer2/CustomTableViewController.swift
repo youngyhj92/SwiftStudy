@@ -46,15 +46,15 @@ class CustomTableViewController: UIViewController, UITableViewDelegate, UITableV
     //tableView 한개 행을 클릭했을 때 동작
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //insert Detail view
-//        guard let detailView = self.storyboard!.instantiateViewController(withIdentifier:
-//            "detailInfo")as? InfoViewController else {
-//                return
-//        }
-//        detailView.movieDetailInfo = movieData[indexPath.row]
-//        self.navigationController?.pushViewController(detailView, animated: true)
+        guard let detailView = self.storyboard!.instantiateViewController(withIdentifier:
+            "detailInfo")as? InfoViewController else {
+                return
+        }
+        detailView.movieDetailInfo = movieData[indexPath.row]
+        self.navigationController?.pushViewController(detailView, animated: true)
         
-        let testViewController = 
-        self.navigationController?.pushViewController(testViewController, animated: true)
+//        let testViewController = NewTestViewController(nibName: "NewTestView", bundle: nil)
+//        self.navigationController?.pushViewController(testViewController, animated: true)
     }
 
 }

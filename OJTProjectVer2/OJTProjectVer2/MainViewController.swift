@@ -65,9 +65,9 @@ class MainViewController : UITableViewController  {
         let logoutAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.destructive, handler: {
             (logoutAction) in self.logout()
         })
-        let logoutCalcelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
+        let logoutCancelAction = UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil)
         logoutCheckDialog.addAction(logoutAction)
-        logoutCheckDialog.addAction(logoutCalcelAction)
+        logoutCheckDialog.addAction(logoutCancelAction)
         self.present(logoutCheckDialog, animated: false)
     }
 
@@ -77,7 +77,6 @@ class MainViewController : UITableViewController  {
         UserDefaults.standard.removeObject(forKey: "isLogin")
        
         self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
-//        self.dismiss(animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
 }
 

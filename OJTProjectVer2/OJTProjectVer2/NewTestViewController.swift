@@ -9,6 +9,15 @@
 import UIKit
 
 class NewTestViewController : UIViewController  {
+//    
+    override init(nibName:String? , bundle: Bundle?) {
+        super.init(nibName: nibName, bundle: bundle)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -16,5 +25,4 @@ class NewTestViewController : UIViewController  {
         newTestView.frame = self.view.frame
         self.view.addSubview(newTestView)
     }
-    
 }
